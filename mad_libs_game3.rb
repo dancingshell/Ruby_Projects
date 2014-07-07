@@ -8,10 +8,10 @@ def fetch_name
   end
 end
 
+
 def madlibs
   quote = "I've learned that noun will verb what you said, noun will verb what you did, but noun will never verb how you made them verb"
   passage = quote.split
-
   
   puts "\nMAD LIBS!!!"
 
@@ -27,7 +27,7 @@ def madlibs
     fetch_name()
 
     if counter < $game_counter ||= 0
-      puts "new_user? Y/N\n"
+      puts "New user? Y/N\n"
       @new_user_response = gets.chomp
       @new_user_response.downcase!
       
@@ -54,11 +54,11 @@ def madlibs
     madlibs #recursive method (plays game again)
 
   elsif answer == "n"
-    puts "\nGoodbye!"
+    puts "Goodbye!"
   else 
-    puts "Please choose Y/N." 
+    puts "Please choose Y/N."
+    madlibs
   end    
 end  
 
 madlibs
-
